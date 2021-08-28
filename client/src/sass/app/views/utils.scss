@@ -1,0 +1,10 @@
+@import "../../foundation/all";
+
+.wrapper-printer {
+  width: 100%;
+  min-height: inherit;
+  max-height: inherit;
+  background-color: #fff;
+  border: 0.0625rem solid $blue;
+  padding-right: 1.25rem;
+}

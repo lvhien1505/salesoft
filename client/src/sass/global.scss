@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    TABLE OF CONTENTS
+\*------------------------------------*/
+
+/**
+ *
+ * FOUNDATIONS................................................
+ * BASE.......................................................
+ */
+
+/*=============================================
+ =                   Foundations               =
+ =============================================*/
+
+@import "foundation/all";
+
+/*==============================================
+  =                   Base                      =
+  =============================================*/
+
+@import "base/reset";
+@import "base/root";
+
+body {
+  font-family: $body-font-family;
+  font-size: $body-font-size !important;
+  font-weight: $body-font-weight;
+  color: $body-text-color !important;
+
+  box-sizing: border-box !important;
+
+  @include desktop {
+    font-size: 16px !important;
+  }
+  @include laptop {
+    font-size: 14px !important;
+  }
+  @include tablet {
+    font-size: 14px !important;
+  }
+  @include mobile {
+    font-size: 14px !important;
+  }
+}

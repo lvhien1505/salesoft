@@ -1,0 +1,106 @@
+@import "../../foundation/all";
+@import "../format";
+
+.wrapper-pop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  .pop-default {
+    width: 50rem;
+    flex-grow: 1;
+    background-color: $body-bg-color;
+    border-left: 0.0625rem solid $blue;
+    box-shadow: map-get($shadows, "base");
+    padding: 0 1rem 1rem 1rem;
+    .pop-header {
+      height: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h2 {
+        margin: 0;
+        color: $blue;
+      }
+    }
+    .pop-content {
+      height: calc(100vh - 3rem - 1rem);
+    }
+  }
+}
+
+.pop-content {
+  .product-pop-content {
+    height: 100%;
+    .product-screen {
+      height: calc(100vh - 3rem - 2.5rem);
+      position: relative;
+      .header-screen {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .btn-action {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          button {
+            margin-right: 0.5rem;
+            height: 32px;
+            width: 32px;
+          }
+          button:last-child {
+            height: 32px !important;
+            width: fit-content !important;
+          }
+          .price-table{
+            margin-right: 0.5rem;
+            .pricetable-select{
+              height: 32px;
+            }
+          }
+
+          button:last-child:hover {
+            background-color: $green-dark;
+          }
+        }
+      }
+      .product-list {
+        margin-top: 0.5rem;
+        .product-item {
+          display: flex;
+          padding: 0.2rem;
+          border: 0.0625rem solid $gray-dark;
+          img {
+            object-fit: cover;
+          }
+          .product-info {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0.3rem;
+            justify-content: space-between;
+            span {
+              font-size: 13px;
+            }
+            span:first-child {
+              width: 8rem;
+              max-width: 8rem;
+              overflow-x: hidden;
+              font-weight: $fw-medium;
+            }
+            span:last-child {
+              font-weight: $fw-semibold;
+              color: $green;
+            }
+          }
+        }
+        .product-item:hover {
+          cursor: pointer;
+          background-color: rgba(161, 161, 161, 0.4);
+        }
+      }
+    }
+  }
+}

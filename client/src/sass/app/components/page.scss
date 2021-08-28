@@ -1,0 +1,46 @@
+@import "../../foundation/all";
+
+.panigation-default {
+  display: flex;
+  justify-content: flex-end;
+  .first-page,
+  .last-page,
+  .pre-page,
+  .next-page,
+  .input-page {
+    height: 32px;
+    width: 32px;
+    margin-left: 0.5rem;
+  }
+  .first-page,
+  .last-page {
+    position: relative;
+    i {
+      font-size: 1.2rem;
+      position: absolute;
+      top: 0;
+    }
+    i:first-child {
+      left: 2px;
+    }
+    i:last-child {
+      left: 10px;
+    }
+  }
+  .next-page,
+  .pre-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  .input-page{
+    outline: none;
+    border: none;
+    border: 0.0625rem solid $blue;
+    text-align: center;
+  }
+
+}

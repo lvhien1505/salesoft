@@ -1,0 +1,90 @@
+@import "../../foundation/all";
+
+.default-custom {
+  width: 100%;
+  margin-top: 0.5rem;
+  .default-custom-left {
+    span.title-default-custom {
+      height: fit-content;
+      display: inline-block;
+      font-size: calc(#{$fs-xl} - 3px);
+      font-weight: $fw-bold;
+      color: $dark;
+    }
+    .cards-select-default {
+      margin-top: 1rem;
+    }
+    .default-select-record {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .default-custom-right {
+    .btn-action-default {
+      display: flex;
+      justify-content: flex-end;
+      .btn-action,
+      .btn-action-menu {
+        margin-left: 0.5rem;
+        button {
+          height: calc(2rem + 4px) !important;
+        }      
+      }
+      .btn-action:last-child {
+        button:last-child {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          i {
+            padding: 0;
+          }
+        }
+      }
+      .btn-action-menu {
+        position: relative;
+        ul.ant-menu {
+          position: absolute;
+          top: 2.5rem;
+          right: 0;
+          z-index: 20;
+          width: 15rem;
+          box-shadow: map-get($shadows, "base");
+          background-color: $blue;
+          padding: 0.2rem 0;
+          li {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            width: 100%;
+            span,
+            i {
+              color: $body-bg-color;
+              font-size: 1rem;
+            }
+            span {
+              margin-left: 1rem;
+            }
+            i {
+              margin-left: 0.5rem;
+            }
+            .ant-menu-submenu-title {
+              margin: 0;
+              width: 100%;
+            }
+          }
+          li:hover {
+            background-color: $sub-menu-bg;
+          }
+        }
+      }
+    }
+    .search-section {
+      .inp-search {
+        height: calc(2rem + 4px);
+      }
+    }
+    .table-default {
+      margin-top: 0.8rem;
+    }
+  }
+}

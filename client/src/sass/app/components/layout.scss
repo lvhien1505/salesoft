@@ -1,0 +1,263 @@
+@import "../../foundation/all";
+
+.dashboard-layout {
+  width: 100%;
+  .dashboard-layout-header {
+    display: flex;
+    flex-direction: column-reverse;
+    .header-dashboard-header {
+      padding: 0 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 3rem;
+      .logo-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .nav-menu-mb {
+          position: relative;
+          button{
+            margin-right: 1rem;
+          }
+          ul.ant-menu {
+            position: absolute;
+            top: 2.5rem;
+            z-index: 20;
+            width: 20rem;
+            box-shadow: map-get($shadows, "base" );
+            background-color: $blue;
+            padding: 0.5rem 0;
+            li{
+              display: flex;
+              align-items: center;
+              margin: 0;
+              width: 100%;
+              span,i{
+                color: $body-bg-color;
+                font-size: 1rem;
+              }
+              span{
+                margin-left: 1rem;
+              }
+              i{
+                margin-left: 0.5rem;
+              }
+              .ant-menu-submenu-title{
+                width: 100%;
+              }
+            }
+            li.ant-menu-item-selected {
+              background-color: $sub-menu-bg;
+            }
+            li.redirect-sale {
+              background-color: $body-bg-color;
+              i {
+                color: $header-layout-bg !important;
+                font-size: 1.4rem !important;
+              }
+              span {
+                font-size: 1.15rem;
+                font-weight: $fw-semibold;
+                color: $header-layout-bg;
+              }
+              display: flex;
+              align-items: center;
+            }
+            li.redirect-sale:hover {
+              background-color: $sub-menu-bg;
+              span,
+              i {
+                color: $body-bg-color !important;
+              }
+            }
+            li:hover {
+              background-color: $sub-menu-bg;
+            }
+          }
+        }
+        .main-logo {
+          span {
+            font-size: calc(2rem - 5px);
+            font-weight: #{$fw-bold};
+          }
+          span:first-child {
+            color: $sub-menu-bg;
+          }
+          span:last-child {
+            color: $green;
+          }
+        }
+      }
+      .side-logo {
+        display: flex;
+        justify-content: flex-end;
+        margin: auto 0;
+        .config-account,
+        .config-shop {
+          height: fit-content;
+          position: relative;
+          border-radius: 0.3rem;
+
+          .menu-config {
+            position: absolute;
+
+            display: none;
+            z-index: 20;
+            box-shadow: map-get($shadows, "base");
+
+            ul {
+              padding: 0.3rem 0 0.3rem 0;
+              li {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+              }
+              li:hover {
+                background-color: $gray;
+              }
+            }
+          }
+          .toggle-menu {
+            padding: 0.3rem 0.6rem;
+
+            display: flex;
+            align-items: center;
+            span,
+            i {
+              font-size: calc(1rem - 1px) !important;
+              font-weight: $fw-semibold;
+            }
+            i {
+              color: $dark-light;
+            }
+            span {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+        .config-shop {
+          margin-right: 5px;
+        }
+
+        .config-shop:hover,
+        .config-account:hover {
+          cursor: pointer;
+          background-color: $gray-dark;
+          .menu-config {
+            display: block;
+          }
+        }
+      }
+    }
+    .nav-menu {
+      ul {
+        height: 3.5rem;
+        background-color: $blue;
+        padding: 0 2.5rem;
+        display: flex;
+        justify-content: flex-start;
+        border: none;
+        li {
+          padding: 0;
+          width: 8.5rem;
+          span,
+          i {
+            color: $white;
+            font-size: calc(1rem - 1px);
+          }
+          height: 100% !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        li.ant-menu-item-selected {
+          background-color: $sub-menu-bg;
+        }
+        li.redirect-sale {
+          background-color: $body-bg-color;
+          margin-left: auto;
+          border: 0.075rem solid $header-layout-bg;
+          i {
+            color: $header-layout-bg !important;
+            font-size: 1.4rem !important;
+          }
+          span {
+            font-size: 1.15rem;
+            font-weight: $fw-semibold;
+            color: $header-layout-bg;
+          }
+          display: flex;
+          align-items: center;
+        }
+        li.redirect-sale:hover {
+          background-color: $sub-menu-bg;
+          span,
+          i {
+            color: $body-bg-color !important;
+          }
+        }
+        li::after,
+        li::before {
+          content: none;
+        }
+        li:hover {
+          background-color: $sub-menu-bg;
+        }
+      }
+    }
+  }
+  .content-dashboard {
+    background-color: $gray !important;
+    min-height: calc(100vh - 6.5rem);
+    max-height: auto;
+    .main-wrapper {
+      padding: 1rem 2.5rem 1rem 2.5rem;
+      min-height: calc(100vh - 6.5rem);
+      max-height: inherit;
+    }
+  }
+}
+
+.ant-menu-submenu-popup {
+  ul {
+    width: 18rem;
+    background-color: $sub-menu-bg !important;
+    li {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 1.5rem !important;
+      i,
+      span {
+        color: $white;
+      }
+      span {
+        padding-left: 0.3rem !important;
+        font-size: 1rem;
+        @include tablet(){
+          font-size: 1rem;
+        }
+      }
+    }
+    li.ant-menu-item-selected {
+      background-color: $header-layout-bg !important;
+    }
+
+    li:hover {
+      background-color: $header-layout-bg;
+    }
+  }
+
+  ul::-webkit-scrollbar {
+    width: 0.3rem;
+    background-color: $body-bg-color; /* or add it to the track */
+    border: none !important;
+  }
+
+  /* Add a thumb */
+  ul::-webkit-scrollbar-thumb {
+    background: $gray-dark;
+  }
+}

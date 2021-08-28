@@ -1,0 +1,204 @@
+@import "../../foundation/all";
+
+$icon-color: #787878;
+$icon-symbol-bg: #d4d3d3;
+$header-bg-color: #ececee;
+
+@mixin icon_symbol {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  i {
+    font-size: 1rem;
+    color: $icon-color;
+  }
+}
+
+@mixin icon_symbol_hover {
+  background-color: $icon-symbol-bg;
+  cursor: pointer;
+}
+
+.ant-modal-root {
+  //btn default
+  .btn-action {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      margin-left: 0.5rem;
+      height: 2.25rem;
+    }
+  }
+
+  //   end
+  .product-modal {
+    .ant-modal-body {
+      padding-top: 0;
+      padding-bottom: 0;
+      .update-product-form {
+        position: relative;
+        top: -46px;
+        .update-info {
+          .update-left-info,
+          .update-right-info {
+            .label-item {
+              font-weight: $fw-medium;
+            }
+            input {
+              width: 100%;
+            }
+          }
+          .update-left-info {
+            .product-code {
+              input {
+                color: $blue;
+              }
+            }
+            .select-position-item,
+            .select-category-item {
+              position: relative;
+              .ant-select {
+                .ant-select-arrow {
+                  right: 1.5rem;
+                  top: 1.2rem;
+                }
+              }
+              .add-icon-symbol,
+              .update-icon-symbol {
+                @include icon_symbol();
+              }
+              .add-icon-symbol:hover,
+              .update-icon-symbol:hover {
+                @include icon_symbol_hover();
+              }
+            }
+            .select-position-item {
+              .update-icon-symbol {
+                right: 1.25rem;
+              }
+            }
+          }
+          .update-right-info {
+            input {
+              text-align: end;
+            }
+            .price-item-input {
+              position: relative;
+              input {
+                padding-right: 1.5rem;
+              }
+              .add-icon-symbol {
+                @include icon_symbol();
+                top: 0.25rem;
+              }
+              .add-icon-symbol:hover {
+                @include icon_symbol_hover();
+              }
+            }
+          }
+        }
+
+        .img-upload {
+          margin-top: 1rem;
+        }
+
+        .update-utils {
+          margin-top: 0.5rem;
+          width: 100%;
+          .property,
+          .unit {
+            min-height: 2.35rem;
+            height: auto;
+            border: 0.0625rem solid $gray-dark;
+            border-radius: 0.25rem;
+            margin-bottom: 15px;
+            .property-header,
+            .unit-header {
+              background-color: $header-bg-color;
+              height: 2.35rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 0 1.25rem;
+              border-radius: 0.25rem;
+              span {
+                font-size: 1rem;
+                font-weight: $fw-semibold;
+                color: $dark;
+              }
+              div {
+                i {
+                  font-size: 1.25rem;
+                  color: $dark;
+                }
+              }
+            }
+            .property-content,
+            .unit-content {
+              button {
+                margin: 1rem;
+              }
+            }
+          }
+          .property:hover,
+          .unit:hover {
+            cursor: pointer;
+          }
+        }
+
+        .inventory-quota,
+        .product-description,
+        .product-note {
+          border: 0.0625rem solid $header-bg-color;
+          border-radius: 0.25rem;
+          margin-bottom: 1rem;
+          h4 {
+            background-color: $header-bg-color;
+            font-weight: 600;
+            padding: 0.5rem;
+            padding-left: 1.25rem;
+          }
+          textarea,
+          textarea:focus {
+            border: none !important;
+          }
+        }
+        .inventory-quota {
+          .control-quota {
+            padding: 0 1.25rem;
+            input {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*=============================================
+=                 Modal Customer             =
+=============================================*/
+  .customer-modal,.supplier-modal,.carrier-modal {
+    .update-partner-form {
+      .update-info {
+        .label-item {
+          font-weight: $fw-medium;
+        }
+        input {
+          width: 100%;
+        }
+        .partner-code {
+          input {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../foundation/all";
+@import "../format";
+
+$btn-last-bg:#898c8d;
+$btn-last-bg-hover:#767879;
+
+/*=============================================
+=                    Button                   =
+=============================================*/
+
+button.btn_btn-default {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  color: $btn-primary-color !important;
+}
+
+button.btn-icon {
+  i {
+    font-size: 1rem;
+  }
+  span {
+    padding: 0 0.3rem;
+  }
+}
+
+.btn_btn-primary {
+  background-color: $btn-primary-bg !important;
+  border-color: $btn-primary-bg !important;
+}
+
+.btn_btn-primary:hover {
+  background-color: $btn-primary-bg-hover !important;
+  border-color: $btn-primary-bg-hover !important;
+}
+
+.btn_btn-secondary {
+  background-color: $btn-secondary-bg !important;
+  border-color: $btn-secondary-bg !important;
+}
+
+.btn_btn-secondary:hover {
+  background-color: $btn-secondary-bg-hover !important;
+  border-color: $btn-secondary-bg-hover !important;
+}
+
+.btn_btn-last{
+  background-color: $btn-last-bg !important;
+  border-color: $btn-last-bg !important;
+}
+
+.btn_btn-last:hover{
+  background-color: $btn-last-bg-hover !important;
+  border-color: $btn-last-bg-hover !important;
+}
+
+/*=============================================
+=                    Input                   =
+=============================================*/
+
+.wrapper-input {
+  .default-input {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-bottom: 0.0625rem solid $gray-dark !important;
+    border-radius: 0 !important;
+  }
+  .default-input:focus,
+  .ant-input-affix-wrapper-focused {
+    border-bottom: 0.125rem solid $green !important;
+  }
+}
+
+/*=============================================
+=                    Select                   =
+=============================================*/
+
+.wrapper-select {
+  .default-select {
+    border-bottom: 0.0625rem solid $gray-dark !important;
+  }
+
+  .ant-select-focused {
+    border-bottom: 0.125rem solid $green !important;
+  }
+}

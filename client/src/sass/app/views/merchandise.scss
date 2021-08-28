@@ -1,0 +1,160 @@
+@import "../../foundation/all";
+
+$title-color: #3f3f3f;
+$border-color: #d9d9d9;
+$icon-color: #787878;
+
+.stock-take-screen {
+  height: fit-content;
+
+  .left-screen {
+    min-height: calc(100vh - 8.5rem) !important;
+    max-height: auto;
+    .ontop-table {
+      button {
+        border: none;
+        height: calc(2rem + 4px);
+        width: calc(2rem + 4px);
+        border: 1px solid $border-color !important;
+        box-shadow: map-get($shadows, "base");
+        i {
+          color: $icon-color;
+        }
+      }
+      button:hover {
+        background-color: $blue-dark;
+        i {
+          color: $body-bg-color;
+        }
+        border-color: $header-layout-bg;
+      }
+
+      .left-col {
+        display: flex;
+        align-items: center;
+        h3 {
+          margin: 0;
+          margin-left: 1.2rem;
+          font-size: calc(#{$fs-xl} - 3px);
+          color: $title-color;
+          font-weight: $fw-bold;
+        }
+      }
+      .center-col {
+        display: flex;
+        .inp-merchandise {
+          height: calc(2rem + 4px);
+          box-shadow: map-get($shadows, "base");
+        }
+      }
+      .right-col {
+        display: flex;
+        justify-content: flex-end;
+        button {
+          margin-left: 0.3rem;
+        }
+      }
+    }
+    .screen-table {
+      margin-top: 2rem;
+      .tabs-table {
+        button {
+          box-shadow: map-get($shadows, "base");
+        }
+      }
+      .main-table {
+        box-shadow: map-get($shadows, "base");
+      }
+    }
+  }
+  .right-screen {
+    background-color: $body-bg-color;
+    min-height: calc(100vh - 8.5rem) !important;
+    max-height: auto;
+    padding: 0.4rem 1rem;
+    position: relative;
+
+    .stock-take-user,
+    .stock-take-code,
+    .stock-take-status,
+    .total-num-real,
+    .stock-take-man,
+    .calendar-static {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.6rem;
+      span:first-child {
+        font-weight: $fw-semibold;
+      }
+    }
+
+    .stock-take-user {
+      margin-top: 0;
+      .stock-take-man,
+      .calendar-static {
+        i {
+          color: $icon-color;
+        }
+        span {
+          font-weight: $fw-semibold;
+        }
+        span:last-child {
+          margin-left: 0.4rem;
+        }
+      }
+      .stock-take-man,
+      .calendar-static span {
+        border-bottom: 0.0625rem solid $border-color;
+      }
+    }
+
+    .stock-take-code {
+      span:last-child {
+        color: $blue;
+      }
+    }
+
+    .total-num-real {
+      span:last-child {
+        color: $green;
+      }
+    }
+
+    .note {
+      position: relative;
+      margin-top: 0.6rem;
+      i {
+        color: $icon-color;
+        position: absolute;
+        left: 0.4rem;
+        top: 0.2rem;
+        z-index: 10;
+      }
+      textarea {
+        padding-left: 1.5rem;
+      }
+    }
+    .stock-take-history {
+      min-height: 14rem;
+      border: 0.0625rem solid $title-color;
+      h4 {
+        color: $body-bg-color;
+        background-color: $header-layout-bg;
+        border: 0.0625rem solid $header-layout-bg;
+        padding: 0.3rem 0.5rem;
+      }
+    }
+
+    .btn-submit {
+      width: 100%;
+      margin-top: 1rem;
+      button {
+        width: 100%;
+        height: calc(3rem - 4px);
+        font-size: 1rem;
+        font-weight: $fw-semibold;
+      }
+    }
+  }
+}

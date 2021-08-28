@@ -1,0 +1,33 @@
+/*=============================================
+=            Foundation - colors              =
+=============================================*/
+
+/**
+ * This file defines the actual colors that will be used for styling. They will default to the palette
+ * we defined in the _variable.scss file. This is our default palette, and devs can override this
+ * with their own variables.
+ */
+
+/*=============================================
+=            Global text colors               =
+=============================================*/
+$body-text-color: var(--sys-body-text-color, $dark) !default;
+$body-bg-color: var(--sys-body-bg-color, $white) !default;
+
+/*=============================================
+=                 Layout                    =
+=============================================*/
+$header-layout-bg: var(--sys-header-layout-bg, $blue) !default;
+$sub-menu-bg: var(--sys-sub-menu-bg,$blue-dark) !default;
+
+/*=============================================
+=                 Buttons                     =
+=============================================*/
+$btn-primary-color: var(--sys-btn-primary-color, $white) !default;
+$btn-primary-bg: var(--sys-btn-primary-bg, $green) !default;
+$btn-primary-bg-hover: var(--sys-primary-bg-hover, $green-dark) !default;
+
+$btn-secondary-color: var(--sys-btn-secondary-color, $white) !default;
+$btn-secondary-bg: var(--sys-btn-secondary-bg, $blue) !default;
+$btn-secondary-bg-hover: var(--sys-secondary-bg-hover, $blue-dark) !default;
+

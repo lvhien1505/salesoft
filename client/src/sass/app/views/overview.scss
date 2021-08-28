@@ -1,0 +1,175 @@
+@import "../../foundation/all";
+
+$color-title: #3f3f3f;
+$color-item-2: #ff8030;
+$color-item-3: #f94f5e;
+
+.overview-custom {
+  .col-wrapper-info {
+    .ontop-chart,
+    .chart-infosale {
+      background-color: $body-bg-color !important;
+      box-shadow: map-get($shadows, "base");
+    }
+    .ontop-chart {
+      padding-left: 1.2rem;
+      height: 8.5rem;
+      position: relative;
+      .result-title {
+        padding-top: 1rem;
+        span {
+          font-size: 1rem;
+          text-transform: uppercase;
+          font-weight: $fw-semibold;
+          color: $color-title;
+        }
+      }
+      .bottom-math {
+        display: flex;
+        position: absolute;
+        bottom: 1.5rem;
+        i {
+          font-size: 2rem;
+        }
+        .math-revenue,
+        .math-bill-callback {
+          border-right: 0.075rem solid $gray;
+        }
+        .math-revenue,
+        .math-bill-callback,
+        .math-compare {
+          width: 11rem;
+          height: 4rem;
+          display: flex;
+          align-items: center;
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 1rem;
+            padding: 1.2rem 0 !important;
+
+            span:first-child {
+              font-size: calc(#{$fs-base} - 3px);
+              font-weight: $fw-semibold;
+              color: $color-title;
+            }
+            span:nth-child(n + 2) {
+              font-size: 1.3rem;
+              font-weight: $fw-semibold;
+              color: $header-layout-bg;
+            }
+            span:nth-child(n + 3) {
+              font-size: calc(#{$fs-base} - 3px);
+              color: #ada9a9 !important;
+              font-weight: $fw-normal;
+            }
+            @include tablet {
+              span:first-child,
+              span:nth-child(n + 3) {
+                font-size: calc(#{$fs-sm} - 1px);
+              }
+            }
+          }
+        }
+        .math-revenue {
+          i {
+            color: $header-layout-bg;
+          }
+        }
+        .math-bill-callback {
+          .symbol-icon {
+            width: 1.65rem;
+            height: 1.65rem;
+            background-color: $color-item-2;
+            display: flex;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            i {
+              font-size: 1rem;
+              color: $body-bg-color;
+            }
+          }
+          div {
+            span:nth-child(n + 2) {
+              color: $color-item-2;
+            }
+          }
+        }
+        .math-bill-callback,
+        .math-compare {
+          padding-left: 1.2rem;
+        }
+        .math-compare {
+          i {
+            color: $color-item-3;
+          }
+          div {
+            span:first-child {
+              height: 1.2rem !important;
+              visibility: hidden;
+            }
+            span:nth-child(n + 2) {
+              color: $color-item-3;
+            }
+            span:nth-child(n + 3) {
+              width: 12rem;
+            }
+          }
+        }
+      }
+    }
+    .chart-infosale {
+      margin-top: 1rem;
+      padding: 0 1.2rem 1.2rem 1.2rem;
+      .info-revenue {
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .side-custom-select {
+          .title-revenue,
+          .number-revenue {
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: $fw-semibold;
+            color: $color-title;
+          }
+          .symbol-icon {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            position: relative;
+            top: 0.1rem;
+            i {
+              font-size: 1rem;
+              color: $blue-dark;
+            }
+          }
+          .number-revenue {
+            color: $green;
+          }
+        }
+      }
+      .info-chart-sale {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+  .col-wrapper-history {
+    background-color: $body-bg-color !important;
+    box-shadow: map-get($shadows, "base");
+    height: 100%;
+    .title-hitory-action {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      font-weight: $fw-semibold;
+      color: $color-title;
+      border-bottom: 1px solid #d3cfcf;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
